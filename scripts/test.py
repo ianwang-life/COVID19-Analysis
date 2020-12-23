@@ -53,7 +53,25 @@ print("End\n")
 def cube(x):
     return pow(x,3)              # Cannot put any more code after the return statement, return breaks function
 
-c = cube(7)
-print(c)
+c = cube(5)
+print(str(c) + "\n")
 
 # If Statements
+is_male = False     # Set boolean as True or False
+is_tall = False      # Set boolean as True or False
+if is_male or is_tall:       # can use "or" as well as "and"
+    print("You are a male or tall or both")
+else:
+    print("You are neither male nor tall")
+
+# Use of "and/not/elif"
+if is_male and is_tall:
+    print("You are a tall man")
+elif is_male and not(is_tall):
+    print("You are a short man")
+elif not(is_male) and is_tall:
+    print("You are not a man, but you are tall")
+else:
+    print("You are neither a man nor tall")
+
+# Comparisons
