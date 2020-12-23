@@ -74,4 +74,52 @@ elif not(is_male) and is_tall:
 else:
     print("You are neither a man nor tall")
 
-# Comparisons
+# Exponential Function via For Loop
+def raise_to_power(base_num, pow_num):
+    res = 1
+    for index in range(pow_num):
+        res = res * base_num        # base_num * base_num * base_num * ... etc.
+    return res
+
+teams = (raise_to_power(2, 5))
+print("There are " + str(teams) + " teams in the tournament.")
+
+# Array
+rows = 3
+cols = 7
+A = [[1]*cols for _ in range(rows)]
+print(A)
+print(3**3)
+
+# 2D Lists and Nested Loops
+num_grid = [
+[1, 2, 3],     # row 0 with 3 columns
+[4, 5, 6],     # row 1 with 3 columns
+[7, 8, 9],     # row 2 with 3 columns
+[0]            # row 3 with 1 column
+]
+print(num_grid[0][0])
+print(num_grid[2][1])
+print(num_grid[3][0])
+# Print out every element in a 2D array
+for row in num_grid:
+    for col in row:
+        print(col)
+
+def translate(phrase):
+    translation = ""
+    for letter in phrase:
+        if letter in "AEIOUaeiou":               # if letter.lower() in "aeiou"
+            if letter.isupper():
+                translation = translation + "_Y_"
+            else:
+                translation = translation + "_y_"
+        else:
+            translation = translation + letter
+    return translation
+
+print(translate("Hello Canada"))     # can replace user's choice: input("Enter a phrase: ")
+'''
+Multiple-line comments useful for blocking out codes for debugging
+but should generally use # for each line
+'''

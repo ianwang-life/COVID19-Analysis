@@ -1,3 +1,37 @@
+# Guessing game via While Loop + If Statements
+secret_word = "golden"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+while guess != secret_word and not(out_of_guesses):
+    if guess_count < guess_limit:
+        guess = input("Enter guess for secret word: ")
+        guess_count += 1
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:      # boolean equals to True
+    print("Out of guesses - you LOSE!\n")
+else:
+    print("That's right - you WIN!\n")
+
+# Simple Operator Calculator
+print("Use + - * / Calculator")
+n1 = float(input("Enter first number: "))
+op = input("Enter operator: ")
+n2 = float(input("Enter second number: "))
+if op == "+":
+    print(n1+n2)
+elif op == "-":
+    print(n1-n2)
+elif op == "/":
+    print(n1/n2)
+elif op == "*":
+    print(n1*n2)
+else:
+    print("Invalid Operator!\n")
+
 # Getting input from users
 print("Multiply Integers")
 num1 = input("Enter an integer number: ")
